@@ -2,7 +2,7 @@
 ##
 `sudo yum update`
 
-`sudo yum install libvirt-daemon-kvm qemu-kvm`
+`sudo yum install libvirt-daemon-kvm qemu-kvm libvirt libvirt-python libguestfs-tools virt-install`
 
 `sudo yum install kubectl wget` 
 
@@ -21,8 +21,10 @@ sudo systemctl start libvirtd.service
 sudo systemctl status libvirtd.service
 ```
 `sudo usermod -a -G libvirt $(whoami)`
+
 `newgrp libvirt`
 
 `minikube config set vm-driver kvm2`
+
 `minikube start`
 
